@@ -8,8 +8,21 @@ deno task start
 
 The you get the following error:
 
-...
-
+```
+╰─❯ deno task start                                                                                                                                                  ─╯
+Task start deno run -A --allow-scripts --env-file main.ts
+error: Uncaught (in promise) TypeError: gm.prototype.options is not a function
+    at Function.subClass (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/gm@1.25.0/node_modules/gm/index.js:108:16)
+    at new a (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/pdf2pic@3.1.3/node_modules/pdf2pic/dist/index.js:1:1026)
+    at c (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/pdf2pic@3.1.3/node_modules/pdf2pic/dist/index.js:1:3611)
+    at exports.fromPath (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/pdf2pic@3.1.3/node_modules/pdf2pic/dist/index.js:1:5080)
+    at file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/zerox@1.0.41/node_modules/zerox/node-zerox/dist/utils.js:299:55
+    at step (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/zerox@1.0.41/node_modules/zerox/node-zerox/dist/utils.js:67:23)
+    at Object.next (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/zerox@1.0.41/node_modules/zerox/node-zerox/dist/utils.js:48:53)
+    at file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/zerox@1.0.41/node_modules/zerox/node-zerox/dist/utils.js:42:71
+    at new Promise (<anonymous>)
+    at __awaiter (file:///Users/c/d/p/deno-zerox-ocr/deno/node_modules/.deno/zerox@1.0.41/node_modules/zerox/node-zerox/dist/utils.js:38:12)
+```
 
 Same is done with Node for comparison:
 ```bash
